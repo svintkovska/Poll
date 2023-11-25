@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "stoked-citizen-405818",
+  "private_key_id": "45f8ebf1c893a931536e4ba2ef4003388cfe88b3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCS5XrLD9u/Tce1\nLD3sTJBnHxl6CPjqtCQaXOQFpRpgsAMg5cNQNv1+ZxtsoJJ+sk92wN1SUd1Scwq4\nEVPz6Uv/cNhMF5XO2mt1FWUllXTNEDwP6d1I0DhiIqDavx2VngmAGFBT1aVCde+L\n8yzsRlws/yFRA+X/zv0uvzCHjvoyw13rxmpFnbgrnFM94nMGKgt5Yl8EKGopnYhU\nhTrcqrCitcFy+OADxPVuOW6mkiHoVOTMz/ndUsITi02AsIduKenkfF5kWdgVwKkp\nb6DpZ1hIvbQGjxj0LJNFSUtXbX+jkgEeGzHorq/IlDt8MfDZyfIEbke16D/10b3w\nW0B4/i8zAgMBAAECggEAAVtdlVqUDqsBOQhlHPWojjndBWuzQgzHf+2PMgLR8Hdk\nrb+W6b+1nyVgftIIbbjKUcL5nouYqGzdO8c+HulYEXxnekK3aNWguKjhgs3qgSVx\nBr5MF2EAzSYiWmxcJ7b4cxxYb6iumCbCgSCbQ5X50pXDCZmA42wEk9hqPcsJTCD1\n8b+yNRCAJd4u3DLNV1tp1cU/5ur2EfFGsMMyG2t72gr21Pj9XOpdGo52XyhbW9TG\nh/5rsMd7cw3jvUkYrcSjeIvF9yMvmQw9US8xQ2JFphOLnsSNDLJmnGbmGkjqh10O\n9nf4BwqBBe94Haizr6JS/By2fRN9B7ZAUAfIcdc1VQKBgQDH0ADzDAxcxxIGDKQW\nJvP9oYUCeQV3E/oitTr8O8CUK76GL6TFYKdC4uF55y/15MlNLAUSDpfZeyxPWUOv\n8YPBiDzPnKRdFDNUFRsqVXtHQhXaMoQEO0Fe8AgnWCUrL/jmZT6j9OuzhGPNvYGM\nJU0WoZp+qq6vyztS41r5qQXZzwKBgQC8NC3syhKSMfPqFnqy2vpIFycN2XRSPEWt\nl9s9ShO8oKuT9uwV11waJrrLSXzKTDaQkxoTA5k0JpTL9pIQnef6J+GdIXgXJTU4\nBmdCm21JPxk/BOZ+BI848CCsqAaQZKhIQzMUHtVXvLlmDTzRO4BoF1zOCiJO/vi2\nFc2eDAfBXQKBgGnkhlxISlTw+1BRarSCuFP2QbNpx8evwqSaP0Rltk3QUQx0O3KP\nIpWD/9LG/tfmA/juF1HWggs0B+uVdxXLfPQX64JrlX/usLUi6l6pJshA8avNkcFc\nVeymcOvI/wnARrxzc5sYtcFRrELg58MKEayowGPYuPNZVXs8Gn6tYPhpAoGAYHpv\nQH+mXYN2An5bj+xpeSNFRfg/hRiYr5C1NwoObBgBXOyrwdaQxGcuQp/9dMb1AdAn\nAbBKjU1p4dUYs6P/E2H2alKJ+XN9gKbnsGF0+KN8Ea41akx0D0Apv9iy5Lp0+fZY\n7OuRelSoxgPrNWdHQBUZ4hWX2N8kKFOtAGQyZZECgYEAxy5JrEBibqQTNIf04WL/\ncIDKd+7E7SNGlPWRQi45qYpMI6QaFcethhEbBuzNoE6ocvsowrZ/a7CfqIohquUD\nFfzZ/ONdT86yJ3AdyTimXS4cMcc+syDFyX/ydkiKAJFQRi3vBvuQQRDpOX62x3AP\niER/wmTx6xRLzIk+tsLwU8o=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service@stoked-citizen-405818.iam.gserviceaccount.com",
+  "client_id": "106290219040384379169",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service%40stoked-citizen-405818.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
