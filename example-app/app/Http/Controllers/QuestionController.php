@@ -174,6 +174,10 @@ class QuestionController extends Controller
 
     public function destroy(Question $question)
     {
+        foreach ($question->options as $option) {
+            $option->votes()->delete();
+        }
+
         if ($question->image) {
             $this->deleteImage($question->image->id, Question::class);
         }
