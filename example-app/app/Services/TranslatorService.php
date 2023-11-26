@@ -43,7 +43,7 @@ class TranslatorService
             $result = $title;
             $langs = ['uk', 'en'];
             foreach ($langs as $lang) {
-                $result += ' ' . $this->translate($title, $lang);
+                $result .= ' ' . $this->translate($title, $lang);
             }
             return $result;
         }
