@@ -7,7 +7,7 @@ use Google\Cloud\Translate\V2\TranslateClient;
 use Illuminate\Support\Facades\Cache;
 
 /**
- * Class TranslatorService.
+ * Class TranslatorService 
  */
 class TranslatorService
 {
@@ -38,14 +38,14 @@ class TranslatorService
 
     public function makeSearch(Question $question): string
     {
-        if (empty($question->search)) {
-            $title = $question->title;
-            $result = $title;
-            $langs = ['uk', 'en'];
-            foreach ($langs as $lang) {
-                $result .= ' ' . $this->translate($title, $lang);
-            }
-            return $result;
+
+        $title = $question->title;
+        $result = $title;
+        $langs = ['uk', 'en'];
+        foreach ($langs as $lang) {
+            $result .= ' ' . $this->translate($title, $lang);
         }
+        return $result;
+
     }
 }

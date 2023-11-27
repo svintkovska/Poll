@@ -43,12 +43,15 @@ class QuestionController extends Controller
         }
         $question = new Question();
         $question->fill($request->validated() + ['active' => $request->has('active')]);
-        if ($this->hasFile('image')) {
+        if ($request->hasFile('image')) {
             $image = $this->saveImage($request->file('image'));
             if ($image) {
                 $question->image()->associate($image);
             }
         }
+
+        $question->search = $this->translatorService->makeSearch($question);
+
         $question->save();
 
         $optionsData = $request->input('options', []);
@@ -193,4 +196,5 @@ class QuestionController extends Controller
 
         return redirect()->route('questions.index')->with('success', 'Question deleted successfully!');
     }
+
 }
