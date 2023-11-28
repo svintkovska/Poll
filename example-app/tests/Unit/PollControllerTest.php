@@ -11,6 +11,8 @@ use App\Models\Option;
 
 class PollControllerTest extends TestCase
 {
+    use RefreshDatabase;
+
     protected function authenticateUser()
     {
         $user = User::factory()->create();
@@ -22,13 +24,7 @@ class PollControllerTest extends TestCase
     public function test_vote_method_votes_for_question_option()
     {
         $user = $this->authenticateUser();
-        $question = Question::create([
-            'title' => 'Test Question',
-            'description' => 'Test Description',
-            'start_at' => now(),
-            'end_at' => now()->addDays(1),
-            'user_id' => $user->id
-        ]);
+        $question = Question::factory()->for($user)->create();
 
         $option = Option::create([
             'title' => 'Test Option',

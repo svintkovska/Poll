@@ -2,55 +2,67 @@
 
 namespace Tests\Unit;
 
+use App\Models\Question;
 use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class HttpGetAppTest extends TestCase
 {
-    public function test_public_index_page_response(): void
-    {
-        $response = $this->get("/");
+    use RefreshDatabase;
 
-        $response->assertStatus(200);
-    }
-    public function test_public_show_page_response(): void
-    {
-        $response = $this->get("/poll/2/show");
-
-        $response->assertStatus(200);
-    }
-
-    public function test_auth_questions_page_response(): void
+    protected function authenticateUser()
     {
         $user = User::factory()->create();
+        $this->actingAs($user);
 
-        $response = $this->actingAs($user)->get("/questions");
+        return $user;
+    }
+    public function test_public_index_page(): void
+    {
+        $response = $this->get(route('poll.index'));
+        $response->assertStatus(200);
+    }
+    public function test_public_show_page(): void
+    {
+        $user = $this->authenticateUser();
+        $question = Question::factory()->for($user)->create();
 
+        $response = $this->get(route('poll.show', ['question' => $question->id]));
+        $response->assertStatus(200);
+        $response->assertSeeText($question->title);
+
+    }
+
+    public function test_auth_questions_page(): void
+    {
+        $this->authenticateUser();
+        $response = $this->get(route('questions.index'));
         $response->assertStatus(200);
     }
 
-    public function test_auth_question_edit_page_response(): void
+    public function test_auth_question_edit_page(): void
     {
-        $user = User::factory()->create();
+        $user = $this->authenticateUser();
+        $question = Question::factory()->for($user)->create();
 
-        $response = $this->actingAs($user)->get("/question/2/edit");
-
+        $response = $this->get(route('questions.edit', ['question' => $question->id]));
         $response->assertStatus(200);
     }
-    public function test_auth_question_create_page_response(): void
+    public function test_auth_question_create_page(): void
     {
-        $user = User::factory()->create();
-
-        $response = $this->actingAs($user)->get("/questions/create");
-
+        $this->authenticateUser();
+        $response = $this->get(route('questions.create'));
         $response->assertStatus(200);
     }
-    public function test_auth_question_show_page_response(): void
+    public function test_auth_question_show_page(): void
     {
-        $user = User::factory()->create();
+        $user = $this->authenticateUser();
+        $question = Question::factory()->for($user)->create();
 
-        $response = $this->actingAs($user)->get("/question/2/show");
-
+        $response = $this->get(route('questions.show', ['question' => $question->id]));
         $response->assertStatus(200);
     }
 }
