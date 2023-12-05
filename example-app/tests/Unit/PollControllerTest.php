@@ -21,7 +21,7 @@ class PollControllerTest extends TestCase
         return $user;
     }
 
-    public function test_vote_method_votes_for_question_option()
+    public function test_vote_method()
     {
         $user = $this->authenticateUser();
         $question = Question::factory()->for($user)->create();

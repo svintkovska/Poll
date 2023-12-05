@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1 class="text-center mb-4">{{__('site.action.create_entity', ['entity' => __('site.question.single')])}}</h1>
+                <h1 class="text-center mb-4 text-light">{{__('site.action.create_entity', ['entity' => __('site.question.single')])}}</h1>
                      @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -22,41 +22,41 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="title" class="form-label">{{__('site.question.field.title')}}:</label>
+                        <label for="title" class="form-label text-light">{{__('site.question.field.title')}}:</label>
                         <input type="text" class="form-control" name="title" id="title" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="description" class="form-label">{{__('site.question.field.description')}}:</label>
+                        <label for="description" class="form-label text-light">{{__('site.question.field.description')}}:</label>
                         <textarea class="form-control" name="description" id="description" required></textarea>
                     </div>
 
                     <div class="mb-3">
-                        <label for="start_at" class="form-label">{{__('site.question.field.start_at')}}:</label>
+                        <label for="start_at" class="form-label text-light">{{__('site.question.field.start_at')}}:</label>
                         <input type="datetime-local" class="form-control" name="start_at" id="start_at" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="end_at" class="form-label">{{__('site.question.field.end_at')}}:</label>
+                        <label for="end_at" class="form-label text-light">{{__('site.question.field.end_at')}}:</label>
                         <input type="datetime-local" accept=".jpg, .png, .jpeg" class="form-control" name="end_at" id="end_at" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="image" class="form-label">{{__('site.action.select_image')}}:</label>
+                        <label for="image" class="form-label text-light">{{__('site.action.select_image')}}:</label>
                         <input type="file" class="form-control" name="image" id="image">
                     </div>
                     
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" name="active" id="active" checked>
-                        <label class="form-check-label" for="active">{{__('site.question.field.active')}}</label>
+                        <label class="form-check-label text-light" for="active">{{__('site.question.field.active')}}</label>
                     </div>
 
-                    <h2 class="mb-3">{{__('site.option.plural')}}</h2>
+                    <h2 class="mb-3 text-light">{{__('site.option.plural')}}</h2>
 
                     <div id="optionsContainer">
                         @for ($i = 0; $i < 2; $i++)
                             <div class="option mb-3">
-                                <label for="options[{{ $i }}][title]" class="form-label">{{__('site.option.single')}} {{ $i + 1 }}:</label>
+                                <label for="options[{{ $i }}][title]" class="form-label text-light">{{__('site.option.single')}} {{ $i + 1 }}:</label>
                                 <input type="text" class="form-control" name="options[{{ $i }}][title]" required>
                                 <div class="row mt-1">
                                     <label for="options[{{ $i }}][image]" class="form-label mt-2"></label>
@@ -94,7 +94,7 @@
                     newOption.className = 'option mb-3';
 
                     newOption.innerHTML = `
-                        <label for="options[${optionCount}][title]" class="form-label">{{__('site.option.single')}} ${optionCount + 1}:</label>
+                        <label for="options[${optionCount}][title]" class="form-label text-light">{{__('site.option.single')}} ${optionCount + 1}:</label>
                         <input type="text" class="form-control" name="options[${optionCount}][title]" required>
                         <div class="row mt-1">
                             <label for="options[${optionCount}][image]" class="form-label mt-2"></label>

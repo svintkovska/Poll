@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1 class="text-center mb-4">{{__('site.question.my_questions')}}</h1>
+                <h1 class="text-center mb-4 text-light">{{__('site.question.my_questions')}}</h1>
                 <a href="{{ route('questions.create') }}" class="btn btn-primary mb-3">{{__('site.action.create')}}</a>
 
                 @if($models)

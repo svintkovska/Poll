@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1 class="text-center mb-4"> {{__('site.action.edit_entity', ['entity' => __('site.question.single')])}}</h1>
+                <h1 class="text-center mb-4 text-light"> {{__('site.action.edit_entity', ['entity' => __('site.question.single')])}}</h1>
                      @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -26,37 +26,37 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="title" class="form-label">{{__('site.question.field.title')}}</label>
+                            <label for="title" class="form-label text-light">{{__('site.question.field.title')}}</label>
                             <input type="text" class="form-control" id="title" name="title" value="{{ $model->title }}" required>
                         </div>
 
                         <div class="col-md-6 mb-3">
-                            <label for="description" class="form-label">{{__('site.question.field.description')}}</label>
+                            <label for="description" class="form-label text-light">{{__('site.question.field.description')}}</label>
                             <input type="text" class="form-control" id="description" name="description" value="{{ $model->description }}" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="start_at" class="form-label">{{__('site.question.field.start_at')}}</label>
+                            <label for="start_at" class="form-label text-light">{{__('site.question.field.start_at')}}</label>
                             <input type="datetime-local" class="form-control" id="start_at" name="start_at" value="{{ $model->start_at ? $model->start_at->format('Y-m-d\TH:i') : '' }}" required>
                         </div>
 
                         <div class="col-md-6 mb-3">
-                            <label for="end_at" class="form-label">{{__('site.question.field.end_at')}}</label>
+                            <label for="end_at" class="form-label text-light">{{__('site.question.field.end_at')}}</label>
                             <input type="datetime-local" class="form-control" id="end_at" name="end_at" value="{{ $model->end_at ? $model->end_at->format('Y-m-d\TH:i') : '' }}" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="active" class="form-label">{{__('site.question.field.active')}}</label>
+                            <label for="active" class="form-label text-light">{{__('site.question.field.active')}}</label>
                             <input type="checkbox" class="form-check-input ml-4" id="active" name="active" {{ $model->active ? 'checked' : '' }}>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="image" class="form-label"> {{__('site.question.field.current_image')}}</label>
+                        <label for="image" class="form-label text-light"> {{__('site.question.field.current_image')}}</label>
                         @if($model->image)
                             <img src="{{ asset('storage/uploads/' . $model->image->filename) }}" alt="Current Image" class="img-thumbnail" style="max-width: 200px; max-height: 200px;">
                         @else
@@ -65,12 +65,12 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="new_image" class="form-label">{{__('site.question.field.new_image')}}</label>
+                        <label for="new_image" class="form-label text-light">{{__('site.question.field.new_image')}}</label>
                         <input type="file" class="form-control" id="new_image" name="new_image">
                     </div>
 
-                    <h2>{{__('site.option.plural')}}</h2>
-                    <table class="table">
+                    <h2 class="text-light">{{__('site.option.plural')}}</h2>
+                    <table class="table text-light">
                         <thead>
                             <tr>
                                 <th>{{__('site.option.field.title')}}</th>

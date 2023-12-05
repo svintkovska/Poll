@@ -43,7 +43,7 @@
                     </div>
                 </div>
             @empty
-                <p>{{__('site.sentence.no_questions')}}</p>
+                <p class="text-light">{{__('site.sentence.no_questions')}}</p>
             @endforelse
         </div>
     </div>

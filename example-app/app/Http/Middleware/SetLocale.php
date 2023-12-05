@@ -25,7 +25,6 @@ class SetLocale
         if ($language === null) {
             // Get preferred languages from the Accept-Language header
             $preferredLanguages = $request->getLanguages();
-            var_dump($preferredLanguages);
             foreach ($preferredLanguages as $preferredLanguage) {
                 if (in_array($preferredLanguage, ['en', 'uk'])) {
                     $language = $preferredLanguage;
